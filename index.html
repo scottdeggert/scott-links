@@ -102,6 +102,21 @@
       margin-top: 0.25rem;
     }
 
+    .identity .org-link {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      color: #ee4996;
+    }
+
+    .identity .org-link:hover {
+      text-decoration: underline;
+    }
+
     .identity .tagline {
       font-family: 'Lora', serif;
       font-style: italic;
@@ -148,6 +163,17 @@
       height: 26px;
       object-fit: contain;
       flex-shrink: 0;
+    }
+
+    .mktng-logo {
+      width: 74px;
+      height: 20px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .mktng-cta-text {
+      color: #ee4996;
     }
 
     /* Hero / Exclusive Offer */
@@ -275,6 +301,7 @@
     <div class="identity">
       <h1>Scott Eggert</h1>
       <div class="role">Founder & CEO · GoldenDoodle AI</div>
+      <a href="https://mktng.co" target="_blank" rel="noopener" class="org-link">President • MKTNG</a>
       <p class="tagline">Trauma-informed AI for mission-driven work</p>
     </div>
 
@@ -282,7 +309,6 @@
     <div class="links">
 
       <!-- Exclusive Offer (Hero) -->
-      <div class="hero-badge">NTC 2026 Exclusive</div>
       <a href="https://goldendoodleai.com/founderoffer" class="link-btn hero" data-track="exclusive_offer">
         <img src="goldendoodle-icon.png" alt="GoldenDoodle icon" class="link-btn-icon" width="20" height="20" loading="lazy">
         Try GoldenDoodle Free
@@ -304,6 +330,12 @@
       <a href="https://calendly.com/scotteggert" target="_blank" rel="noopener" class="link-btn secondary" data-track="calendly">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         Book a Conversation
+      </a>
+
+      <!-- MKTNG -->
+      <a href="https://mktng.co" target="_blank" rel="noopener" class="link-btn secondary" data-track="for_brands_who_care">
+        <img src="mktng-logo.png" alt="MKTNG logo" class="mktng-logo" width="74" height="20" loading="lazy">
+        <span class="mktng-cta-text">For Brands Who Care</span>
       </a>
 
       <!-- vCard Download -->
