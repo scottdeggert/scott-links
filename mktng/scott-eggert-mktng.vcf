@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Eggert;Scott;;;
+FN:Scott Eggert
+ORG:MKTNG
+TITLE:President
+TEL;TYPE=CELL:+19162138995
+EMAIL;TYPE=WORK:scott@mktng.co
+URL:https://mktng.co
+END:VCARD

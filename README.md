@@ -1,24 +1,34 @@
 # scott-links
 
-Personal link page for Scott Eggert, Founder & CEO of GoldenDoodle AI. Built for conference networking — designed to be scanned via QR code or NFC tap.
+Personal link pages for Scott Eggert — virtual business cards for conference networking. Designed to be scanned via QR code or NFC tap.
 
-**Live:** [scott.goldendoodleai.com](https://scott.goldendoodleai.com)
+**Live (GoldenDoodle AI):** [scott.goldendoodleai.com](https://scott.goldendoodleai.com)  
+**Live (MKTNG):** [scott.goldendoodleai.com/mktng/](https://scott.goldendoodleai.com/mktng/)
 
 ## What's here
 
-- `index.html` — Single-file link page (HTML/CSS, no build step)
-- `scott.png` — Headshot
-- `scott-eggert.vcf` — vCard contact file (auto-downloads on tap)
+| Path | Purpose |
+|---|---|
+| `index.html` | GoldenDoodle AI card — Founder & CEO lead, trauma-informed AI positioning |
+| `mktng/index.html` | MKTNG card — President of MKTNG lead, agency/comms positioning |
+| `scott.png` | Headshot (shared) |
+| `mktng-logo.png` | MKTNG logo (shared) |
+| `scott-eggert.vcf` | vCard for GDAI card |
+| `mktng/scott-eggert-mktng.vcf` | vCard for MKTNG card |
+
+Static HTML/CSS only — no build step, no dependencies.
 
 ## Hosting
 
 Static site on Netlify (free tier). Auto-deploys on push to `main`. Custom subdomain via CNAME record pointing `scott` → `scott-links.netlify.app`.
 
+Folder routes (`/mktng/`) work out of the box on Netlify.
+
 ## Editing
 
-Open in Cursor, edit `index.html`, push. No dependencies, no build process.
+Open in Cursor, edit the relevant `index.html`, push. No dependencies, no build process.
 
-## Links on the page
+## GoldenDoodle AI card (`/`)
 
 | Button | Destination |
 |---|---|
@@ -26,4 +36,26 @@ Open in Cursor, edit `index.html`, push. No dependencies, no build process.
 | Connect on LinkedIn | linkedin.com/in/scottdeggert |
 | Free Dignity Audit | dignityaudit.com |
 | Book a Conversation | calendly.com/scotteggert |
+| My Marketing Agency | mktng.co |
 | Save My Contact | Downloads scott-eggert.vcf |
+
+Footer links to goldendoodleai.com. Discreet cross-link to MKTNG card.
+
+## MKTNG card (`/mktng/`)
+
+| Button | Destination |
+|---|---|
+| Visit MKTNG | mktng.co |
+| Connect on LinkedIn | linkedin.com/in/scottdeggert |
+| Book a Conversation | calendly.com/scotteggert |
+| Save My Contact | Downloads scott-eggert-mktng.vcf |
+
+Footer links to goldendoodleai.com. Discreet cross-link to GDAI card.
+
+## Local preview
+
+```bash
+# From repo root — open either card in a browser
+open index.html
+open mktng/index.html
+```
