@@ -26,6 +26,9 @@
       --text-secondary: rgba(238, 244, 246, 0.72);
       --berry-glow: rgba(212, 68, 160, 0.25);
       --cyan-glow: rgba(45, 212, 192, 0.15);
+      --teal: #32808c;
+      --teal-dark: #266670;
+      --teal-glow: rgba(50, 128, 140, 0.25);
     }
 
     html {
@@ -193,6 +196,45 @@
       transform: translateY(0);
     }
 
+    .link-btn.gd {
+      background: var(--teal);
+      color: var(--white);
+      box-shadow: 0 4px 20px var(--teal-glow), 0 1px 3px rgba(0,0,0,0.2);
+      font-size: 1rem;
+      padding: 0.85rem 1.25rem;
+    }
+
+    .link-btn.gd:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(50, 128, 140, 0.35), 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .link-btn.gd:active {
+      transform: translateY(0);
+    }
+
+    .btn-label-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+      line-height: 1.2;
+      text-align: left;
+    }
+
+    .btn-label-main {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .btn-label-sub {
+      font-weight: 500;
+      font-size: 0.72rem;
+      opacity: 0.88;
+      letter-spacing: 0.01em;
+    }
+
     /* Secondary buttons */
     .link-btn.secondary {
       background: var(--slate);
@@ -217,26 +259,7 @@
     .links .link-btn:nth-child(2) { animation: fadeUp 0.5s ease-out 0.2s both; }
     .links .link-btn:nth-child(3) { animation: fadeUp 0.5s ease-out 0.25s both; }
     .links .link-btn:nth-child(4) { animation: fadeUp 0.5s ease-out 0.3s both; }
-
-    /* --- Cross-link --- */
-    .variant-link {
-      margin-top: 1.5rem;
-      animation: fadeUp 0.5s ease-out 0.45s both;
-    }
-
-    .variant-link a {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 500;
-      color: rgba(238, 244, 246, 0.4);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.2s;
-    }
-
-    .variant-link a:hover {
-      color: var(--cyan);
-    }
+    .links .link-btn:nth-child(5) { animation: fadeUp 0.5s ease-out 0.35s both; }
 
     /* --- Footer --- */
     .footer {
@@ -260,8 +283,26 @@
     .footer .powered {
       font-family: 'Poppins', sans-serif;
       font-size: 0.7rem;
-      color: rgba(238, 244, 246, 0.25);
+      color: rgba(238, 244, 246, 0.4);
       margin-top: 0.75rem;
+      line-height: 1.45;
+      max-width: 18rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer .tagline-short {
+      display: none;
+    }
+
+    @media (max-width: 380px) {
+      .footer .tagline-full {
+        display: none;
+      }
+
+      .footer .tagline-short {
+        display: inline;
+      }
     }
 
     /* --- Animations --- */
@@ -292,7 +333,7 @@
 
     <!-- MKTNG Logo -->
     <div class="logo-wrap">
-      <img src="../mktng-logo.png" alt="MKTNG" width="140" height="38" loading="eager">
+      <img src="../mktng-logo-white.png" alt="MKTNG" width="140" height="38" loading="eager">
     </div>
 
     <!-- Headshot -->
@@ -314,8 +355,16 @@
     <div class="links">
 
       <a href="https://mktng.co" target="_blank" rel="noopener" class="link-btn hero" data-track="visit_mktng">
-        <img src="../mktng-logo.png" alt="" class="link-btn-icon" width="26" height="26" loading="lazy" aria-hidden="true">
+        <img src="../mktng-logo-white.png" alt="" class="link-btn-icon" width="26" height="26" loading="lazy" aria-hidden="true">
         Visit MKTNG
+      </a>
+
+      <a href="https://goldendoodleai.com" target="_blank" rel="noopener" class="link-btn gd" data-track="goldendoodle_ai">
+        <img src="../goldendoodle-icon.png" alt="" class="link-btn-icon" width="26" height="26" loading="lazy" aria-hidden="true">
+        <span class="btn-label-stack">
+          <span class="btn-label-main">GoldenDoodle AI</span>
+          <span class="btn-label-sub">Learn about GoldenDoodle AI</span>
+        </span>
       </a>
 
       <a href="https://www.linkedin.com/in/scottdeggert/" target="_blank" rel="noopener" class="link-btn secondary" data-track="linkedin">
@@ -335,15 +384,13 @@
 
     </div>
 
-    <!-- Cross-link to GDAI card -->
-    <div class="variant-link">
-      <a href="../">GoldenDoodle AI card →</a>
-    </div>
-
     <!-- Footer -->
     <div class="footer">
-      <a href="https://goldendoodleai.com">goldendoodleai.com</a>
-      <div class="powered">Communicate Without Compromise</div>
+      <a href="https://mktng.co">mktng.co</a>
+      <div class="powered">
+        <span class="tagline-full">Your work and the people it's for. That's what we build for.</span>
+        <span class="tagline-short">Your work and the people it's for.</span>
+      </div>
     </div>
 
   </div>

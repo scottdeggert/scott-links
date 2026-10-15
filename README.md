@@ -12,7 +12,8 @@ Personal link pages for Scott Eggert — virtual business cards for conference n
 | `index.html` | GoldenDoodle AI card — Founder & CEO lead, trauma-informed AI positioning |
 | `mktng/index.html` | MKTNG card — President of MKTNG lead, agency/comms positioning |
 | `scott.png` | Headshot (shared) |
-| `mktng-logo.png` | MKTNG logo (shared) |
+| `mktng-logo.png` | MKTNG logo (grey wordmark — GDAI card) |
+| `mktng-logo-white.png` | MKTNG logo (white wordmark — MKTNG card) |
 | `scott-eggert.vcf` | vCard for GDAI card |
 | `mktng/scott-eggert-mktng.vcf` | vCard for MKTNG card |
 
@@ -46,11 +47,12 @@ Footer links to goldendoodleai.com. Discreet cross-link to MKTNG card.
 | Button | Destination |
 |---|---|
 | Visit MKTNG | mktng.co |
+| GoldenDoodle AI | goldendoodleai.com |
 | Connect on LinkedIn | linkedin.com/in/scottdeggert |
 | Book a Conversation | calendly.com/scotteggert |
 | Save My Contact | Downloads scott-eggert-mktng.vcf |
 
-Footer links to goldendoodleai.com. Discreet cross-link to GDAI card.
+Footer links to mktng.co with MKTNG tagline.
 
 ## Local preview
 
