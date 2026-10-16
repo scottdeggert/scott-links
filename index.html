@@ -257,7 +257,7 @@
     .links .link-btn:nth-child(2) { animation: fadeUp 0.5s ease-out 0.2s both; }
     .links .link-btn:nth-child(3) { animation: fadeUp 0.5s ease-out 0.25s both; }
     .links .link-btn:nth-child(4) { animation: fadeUp 0.5s ease-out 0.3s both; }
-    .links .link-btn:nth-child(5) { animation: fadeUp 0.5s ease-out 0.35s both; }
+    .links .link-btn:nth-child(5) { animation: fadeUp 0.5s ease-out 0.4s both; }
 
     /* --- Footer --- */
     .footer {
@@ -279,7 +279,8 @@
     }
 
     .footer .powered {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
       font-size: 0.7rem;
       color: rgba(238, 244, 246, 0.4);
       margin-top: 0.75rem;
@@ -287,20 +288,6 @@
       max-width: 18rem;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    .footer .tagline-short {
-      display: none;
-    }
-
-    @media (max-width: 380px) {
-      .footer .tagline-full {
-        display: none;
-      }
-
-      .footer .tagline-short {
-        display: inline;
-      }
     }
 
     /* --- Animations --- */
@@ -353,16 +340,8 @@
     <div class="links">
 
       <a href="https://mktng.co" target="_blank" rel="noopener" class="link-btn hero" data-track="visit_mktng">
-        <img src="mktng-logo-white.png" alt="" class="link-btn-icon" width="26" height="26" loading="lazy" aria-hidden="true">
+        <img src="mktng-logo-all-white.png" alt="" class="link-btn-icon" width="26" height="26" loading="lazy" aria-hidden="true">
         Visit MKTNG
-      </a>
-
-      <a href="https://goldendoodleai.com" target="_blank" rel="noopener" class="link-btn gd" data-track="goldendoodle_ai">
-        <img src="goldendoodle-icon.png" alt="" class="link-btn-icon" width="26" height="26" loading="lazy" aria-hidden="true">
-        <span class="btn-label-stack">
-          <span class="btn-label-main">GoldenDoodle AI</span>
-          <span class="btn-label-sub">Learn about GoldenDoodle AI</span>
-        </span>
       </a>
 
       <a href="https://www.linkedin.com/in/scottdeggert/" target="_blank" rel="noopener" class="link-btn secondary" data-track="linkedin">
@@ -380,15 +359,20 @@
         Save My Contact
       </a>
 
+      <a href="https://goldendoodleai.com" target="_blank" rel="noopener" class="link-btn gd" data-track="goldendoodle_ai">
+        <img src="goldendoodle-icon.png" alt="" class="link-btn-icon" width="26" height="26" loading="lazy" aria-hidden="true">
+        <span class="btn-label-stack">
+          <span class="btn-label-main">GoldenDoodle AI</span>
+          <span class="btn-label-sub">Learn about GoldenDoodle AI</span>
+        </span>
+      </a>
+
     </div>
 
     <!-- Footer -->
     <div class="footer">
       <a href="https://mktng.co">mktng.co</a>
-      <div class="powered">
-        <span class="tagline-full">Your work and the people it's for. That's what we build for.</span>
-        <span class="tagline-short">Your work and the people it's for.</span>
-      </div>
+      <p class="powered">Your work and the people it's for.</p>
     </div>
 
   </div>
