@@ -249,6 +249,26 @@
       font-style: normal;
     }
 
+    /* --- Cross-link --- */
+    .variant-link {
+      margin-top: 1.5rem;
+      animation: fadeUp 0.5s ease-out 0.5s both;
+    }
+
+    .variant-link a {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: rgba(74, 94, 98, 0.55);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    .variant-link a:hover {
+      color: var(--teal);
+    }
+
     /* --- Animations --- */
     @keyframes fadeDown {
       from { opacity: 0; transform: translateY(-12px); }
@@ -330,6 +350,11 @@
         Save My Contact
       </a>
 
+    </div>
+
+    <!-- Cross-link to MKTNG card -->
+    <div class="variant-link">
+      <a href="mktng/">MKTNG card →</a>
     </div>
 
     <!-- Footer -->
