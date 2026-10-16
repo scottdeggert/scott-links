@@ -1,0 +1,8 @@
+name = "scott-mktng-card"
+compatibility_date = "2026-10-01"
+account_id = "5f50d138eb76f9beb59f76d0f356543f"
+workers_dev = true
+routes = [{ pattern = "scott.mktng.co", custom_domain = true }]
+
+[assets]
+directory = "./public"
