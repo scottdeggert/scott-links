@@ -175,6 +175,13 @@
       flex-shrink: 0;
     }
 
+    /* Wide wordmark: size by height so glyph matches ~26px icons (not squeezed in a square) */
+    .link-btn.hero .link-btn-icon {
+      width: auto;
+      height: 26px;
+      max-width: 5.75rem;
+    }
+
     /* Hero CTA */
     .link-btn.hero {
       background: linear-gradient(135deg, var(--berry), var(--berry-dark));
@@ -342,7 +349,7 @@
     <div class="links">
 
       <a href="https://mktng.co" target="_blank" rel="noopener" class="link-btn hero" data-track="visit_mktng">
-        <img src="mktng-logo-all-white.png" alt="" class="link-btn-icon" width="26" height="26" loading="lazy" aria-hidden="true">
+        <img src="mktng-logo-all-white.png" alt="" class="link-btn-icon" height="26" loading="lazy" aria-hidden="true">
         Visit MKTNG
       </a>
 
@@ -373,7 +380,6 @@
 
     <!-- Footer -->
     <div class="footer">
-      <a href="https://mktng.co">mktng.co</a>
       <p class="powered">Your work and the people it's for.</p>
     </div>
 
