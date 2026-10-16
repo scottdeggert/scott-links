@@ -1,63 +1,35 @@
 # scott-links
 
-Personal link pages for Scott Eggert — virtual business cards for conference networking. Designed to be scanned via QR code or NFC tap.
+Personal link cards for Scott Eggert (conference QR / NFC).
 
-**Live (GoldenDoodle AI):** [scott.goldendoodleai.com](https://scott.goldendoodleai.com)  
-**Live (MKTNG):** [scott.goldendoodleai.com/mktng/](https://scott.goldendoodleai.com/mktng/)
+## Two branches, two sites
 
-## What's here
+| Branch | Card | Hosting | Domain |
+|--------|------|---------|--------|
+| **`main`** | GoldenDoodle AI (`index.html` at repo root) | Netlify (existing project) | [scott.goldendoodleai.com](https://scott.goldendoodleai.com) |
+| **`mktng-card`** | MKTNG (`index.html` at repo root on this branch only) | Cloudflare Pages (`scott-mktng`) | Point your MKTNG custom domain at the `scott-mktng` Pages project |
 
-| Path | Purpose |
-|---|---|
-| `index.html` | GoldenDoodle AI card — Founder & CEO lead, trauma-informed AI positioning |
-| `mktng/index.html` | MKTNG card — President of MKTNG lead, agency/comms positioning |
-| `scott.png` | Headshot (shared) |
-| `mktng-logo.png` | MKTNG logo (grey wordmark — GDAI card) |
-| `mktng-logo-white.png` | MKTNG logo (white wordmark — MKTNG card) |
-| `scott-eggert.vcf` | vCard for GDAI card |
-| `mktng/scott-eggert-mktng.vcf` | vCard for MKTNG card |
+Do not merge these branches — each branch is a separate deploy root with a different file set.
 
-Static HTML/CSS only — no build step, no dependencies.
+- **`main`**: GoldenDoodle card and `/mktng/` on Netlify. Do not change Netlify settings for that site.
+- **`mktng-card`**: Self-contained MKTNG card only. Pushes run `.github/workflows/deploy-mktng.yml`, deploying the repository root with `npx wrangler@4 pages deploy . --project-name scott-mktng --branch main`. Set GitHub secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` when ready.
 
-## Hosting
+## MKTNG card files (this branch)
 
-Static site on Netlify (free tier). Auto-deploys on push to `main`. Custom subdomain via CNAME record pointing `scott` → `scott-links.netlify.app`.
+| File | Purpose |
+|------|---------|
+| `index.html` | MKTNG link card |
+| `mktng-logo-white.png` | Header and Visit MKTNG button |
+| `scott.png` | Headshot |
+| `goldendoodle-icon.png` | GoldenDoodle AI button |
+| `scott-eggert-mktng.vcf` | Save My Contact |
+| `fonts/` | Self-hosted Poppins and Plus Jakarta Sans |
 
-Folder routes (`/mktng/`) work out of the box on Netlify.
+Static HTML/CSS only — no build step.
 
-## Editing
-
-Open in Cursor, edit the relevant `index.html`, push. No dependencies, no build process.
-
-## GoldenDoodle AI card (`/`)
-
-| Button | Destination |
-|---|---|
-| Try GoldenDoodle Free | goldendoodleai.com/founderoffer |
-| Connect on LinkedIn | linkedin.com/in/scottdeggert |
-| Free Dignity Audit | dignityaudit.com |
-| Book a Conversation | calendly.com/scotteggert |
-| My Marketing Agency | mktng.co |
-| Save My Contact | Downloads scott-eggert.vcf |
-
-Footer links to goldendoodleai.com. Discreet cross-link to MKTNG card.
-
-## MKTNG card (`/mktng/`)
-
-| Button | Destination |
-|---|---|
-| Visit MKTNG | mktng.co |
-| GoldenDoodle AI | goldendoodleai.com |
-| Connect on LinkedIn | linkedin.com/in/scottdeggert |
-| Book a Conversation | calendly.com/scotteggert |
-| Save My Contact | Downloads scott-eggert-mktng.vcf |
-
-Footer links to mktng.co with MKTNG tagline.
-
-## Local preview
+## Local preview (`mktng-card` branch)
 
 ```bash
-# From repo root — open either card in a browser
-open index.html
-open mktng/index.html
+python3 -m http.server 8765
+# open http://localhost:8765/
 ```
